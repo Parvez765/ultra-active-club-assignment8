@@ -1,0 +1,21 @@
+.sportContainer img{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 8px;
+}
+.sportContainer{
+    height: 500px;
+    border: 2px solid gray;
+    border-radius: 8px;
+}
+
+.addBtn{
+    background-color: rgb(118, 118, 255);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}

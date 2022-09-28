@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Sports.css"
 import myImage from "../../images/myImage-01.png"
 import Swal from 'sweetalert2'
+import Sport from '../Sport/Sport';
 const Sports = () => {
+    const [items, setItems] = useState([])
+    useEffect(() => {
+        fetch("data.json")
+            .then(res => res.json())
+        .then(data =>setItems(data))
+    } ,[])
+
 
     const [timer, setTimer] = useState(localStorage.getItem("timer") || 0)
 
@@ -13,16 +21,24 @@ const Sports = () => {
     
     const activityCompleted = () => {
         Swal.fire(
-    'Good job!',
-    'You Have Achieve Your Goal',
-  'success'
+        'Good job!',
+        'You Have Achieve Your Goal',
+        'success'
 )
     }
 
     return (
         <div className='sportsContainer'>
-            <div className='imgContainer'>
+            <div>
                 <h2>Get A Jump Of Your Day</h2>
+                <div className='imgContainer'>
+                     {
+                    items.map(item => <Sport
+                        key={item.id}
+                        item={item}
+                    />)
+                }
+               </div>
             </div>
             <div>
                 <div className='infoContainer'>
