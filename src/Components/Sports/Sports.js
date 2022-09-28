@@ -63,7 +63,7 @@ const Sports = () => {
                     <h2>Break Detail</h2>
                     <div className='excerciseTime'>
                         <h3>Break Time</h3>
-                        <h3>{timer}</h3>
+                        <h3>{timer}s</h3>
                     </div>
                 </div>
             <button className='completedBtn' onClick={activityCompleted}>Activity Completed</button>
