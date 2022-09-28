@@ -1,9 +1,18 @@
 import React from 'react';
 import "./Sports.css"
 import myImage from "../../images/myImage-01.png"
-
+import Swal from 'sweetalert2'
 const Sports = () => {
-    
+
+
+const activityCompleted = () => {
+        Swal.fire(
+    'Good job!',
+    'You Have Achieve Your Goal',
+  'success'
+)
+    }
+
     return (
         <div className='sportsContainer'>
             <div className='imgContainer'>
@@ -36,11 +45,11 @@ const Sports = () => {
                 <div className='excerciseDetails'>
                     <h2>Break Detail</h2>
                     <div className='excerciseTime'>
-                        <h3>Excercise Time</h3>
+                        <h3>Breaky Time</h3>
                         <h3>0 Seconds</h3>
                     </div>
                 </div>
-            <button className='completedBtn'>Activity Completed</button>
+            <button className='completedBtn' onClick={activityCompleted}>Activity Completed</button>
             </div>
         </div>
     );
