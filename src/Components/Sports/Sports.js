@@ -4,7 +4,12 @@ import myImage from "../../images/myImage-01.png"
 import Swal from 'sweetalert2'
 const Sports = () => {
 
-    const [timer, setTimer] = useState(0)
+    const [timer, setTimer] = useState(localStorage.getItem("timer") || 0)
+
+    const addTimer = (value) => {
+        setTimer(value)
+        localStorage.setItem('timer', value)
+    }
     
     const activityCompleted = () => {
         Swal.fire(
@@ -34,16 +39,16 @@ const Sports = () => {
                </div>
                 <div className='breakInfo'>
                     <h2>Add A Break</h2>
-                    <button className='btnAdd' onClick={() => setTimer(10)}>
+                    <button className='btnAdd' onClick={() => addTimer(10)}>
                         <h3>10s</h3>
                   </button>
-                    <button className='btnAdd' onClick={() => setTimer(20)}>
+                    <button className='btnAdd' onClick={() => addTimer(20)}>
                         <h3>20s</h3>
                   </button>
-                    <button className='btnAdd' onClick={() => setTimer(30)}>
+                    <button className='btnAdd' onClick={() => addTimer(30)}>
                         <h3>30s</h3>
                   </button>
-                    <button className='btnAdd' onClick={() => setTimer(40)}>
+                    <button className='btnAdd' onClick={() => addTimer(40)}>
                         <h3>40s</h3>
                   </button>
                 </div>
