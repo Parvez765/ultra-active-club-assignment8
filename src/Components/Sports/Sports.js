@@ -3,6 +3,7 @@ import "./Sports.css"
 import myImage from "../../images/myImage-01.png"
 
 const Sports = () => {
+    
     return (
         <div className='sportsContainer'>
             <div className='imgContainer'>
@@ -25,6 +26,21 @@ const Sports = () => {
                         <h3>40s</h3>
                     </div>
                 </div>
+                <div className='excerciseDetails'>
+                    <h2>Excercise Detail</h2>
+                    <div className='excerciseTime'>
+                        <h3>Excercise Time</h3>
+                        <h3>0 Seconds</h3>
+                    </div>
+                </div>
+                <div className='excerciseDetails'>
+                    <h2>Break Detail</h2>
+                    <div className='excerciseTime'>
+                        <h3>Excercise Time</h3>
+                        <h3>0 Seconds</h3>
+                    </div>
+                </div>
+            <button className='completedBtn'>Activity Completed</button>
             </div>
         </div>
     );
