@@ -27,6 +27,7 @@
 
 .timer{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     background-color: rgb(230, 230, 230);
     border-radius: 8px;
@@ -48,6 +49,22 @@
     border: none;
     border-radius: 8px;
     margin-top: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.selfInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btnAdd{
+    background-color: rgb(113, 113, 255);
+    padding: 10px 25px;
+    border: none;
+    margin: 10px;
+    border-radius: 8px;
     color: white;
     cursor: pointer;
 }
