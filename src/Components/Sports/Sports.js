@@ -8,14 +8,18 @@ const Sports = () => {
             <div className='imgContainer'>
                 <h2>Get A Jump Of Your Day</h2>
             </div>
-            {/* Name And Image Container */}
             <div>
                 <div className='infoContainer'>
-                <img src={myImage} alt=""></img>
-                <h2>Md. Parvez Hossain Sakib</h2>
-                <h5>Chattagram, Bangladesh</h5>
+                     <img src={myImage} alt=""></img>
+                    <div className='information'>
+                    <h2>Md. Parvez Hossain Sakib</h2>
+                    <h5>Chattagram, Bangladesh</h5>
+                </div>
+               </div>
+                <div className='breakInfo'>
+                    <h2>Add A Break</h2>
+                </div>
             </div>
-           </div>
         </div>
     );
 };

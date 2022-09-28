@@ -4,14 +4,43 @@
 }
 
 .infoContainer{
-    background-color: white;
-    box-shadow: 4px 4px 4px gray;
-    width: 65%;
-    border-radius: 8px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    display: block;
 }
 .infoContainer img{
     width: 100px;
+}
+.information{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.information h5{
+    margin-top:-10px;
+}
+
+.breakInfo{
+    margin-top: 30px;
+}
+
+@media screen and (max-width:992px)  and (min-width: 768px){
+    .sportsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .sportsContainer{
+            display: flex;
+            flex-direction: column;
+        }
+}
+
+@media screen and (min-width: 300px){
+    .sportsContainer {
+            display: flex;
+            flex-direction: column;
+        }
 }
