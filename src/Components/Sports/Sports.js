@@ -18,6 +18,12 @@ const Sports = () => {
                </div>
                 <div className='breakInfo'>
                     <h2>Add A Break</h2>
+                    <div className='timer'>
+                        <h3>10s</h3>
+                        <h3>20s</h3>
+                        <h3>30s</h3>
+                        <h3>40s</h3>
+                    </div>
                 </div>
             </div>
         </div>
