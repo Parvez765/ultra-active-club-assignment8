@@ -1,0 +1,17 @@
+.sportsContainer{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.infoContainer{
+    background-color: white;
+    box-shadow: 4px 4px 4px gray;
+    width: 65%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.infoContainer img{
+    width: 100px;
+}
