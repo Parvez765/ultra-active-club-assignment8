@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header';
 import Sports from './Components/Sports/Sports';
+import Questions from './Components/Questions/Questions';
+
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Sports></Sports>
+      <Questions></Questions>
       
       
       
