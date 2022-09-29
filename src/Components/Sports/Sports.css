@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    margin-bottom: 20px;
    
 }
 
@@ -76,11 +77,23 @@
     cursor: pointer;
 }
 
+.allInfo{
+    position: sticky;
+    top: 0;
+}
+
 @media screen and (min-width:992px)  and (max-width: 768px){
     .sportsContainer{
         display: flex;
         flex-direction: column;
+        
     }
+        .imgContainer {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+    
+        }
 }
 
 @media screen and (max-width: 576px){
@@ -88,6 +101,12 @@
             display: flex;
             flex-direction: column;
         }
+   .imgContainer {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+        
+    }
 }
 
 @media screen and (max-width: 300px){
@@ -95,4 +114,9 @@
             display: flex;
             flex-direction: column;
         }
+    .imgContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
 }

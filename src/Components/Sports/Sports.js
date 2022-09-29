@@ -11,8 +11,17 @@ const Sports = () => {
         .then(data =>setItems(data))
     } ,[])
 
+    const [count, setCount] = useState(0)
+    
+    const handleAddToList = (clicked) => {
+        console.log(clicked.split("s")[0])
+        const updatedValue = count + (+clicked.split("s")[0])
+        setCount(updatedValue)
+        
+    }
 
     const [timer, setTimer] = useState(localStorage.getItem("timer") || 0)
+    
 
     const addTimer = (value) => {
         setTimer(value)
@@ -33,15 +42,19 @@ const Sports = () => {
                 <h2>Get A Jump Of Your Day</h2>
                 <div className='imgContainer'>
                      {
-                    items.map(item => <Sport
-                        key={item.id}
-                        item={item}
+                        items.map(item => <Sport
+                            handleAddToList={handleAddToList}
+                            
+                            key={item.id}
+                            item={item}
+                           
                     />)
                 }
                </div>
             </div>
             <div>
-                <div className='infoContainer'>
+                <div className='allInfo'>
+                     <div className='infoContainer'>
                      <img src={myImage} alt=""></img>
                     <div className='information'>
                     <h2>Md. Parvez Hossain Sakib</h2>
@@ -72,7 +85,7 @@ const Sports = () => {
                     <h2>Excercise Detail</h2>
                     <div className='excerciseTime'>
                         <h3>Excercise Time</h3>
-                        <h3>0 Seconds</h3>
+                        <h3>{count} Seconds</h3>
                     </div>
                 </div>
                 <div className='excerciseDetails'>
@@ -83,6 +96,7 @@ const Sports = () => {
                     </div>
                 </div>
             <button className='completedBtn' onClick={activityCompleted}>Activity Completed</button>
+               </div>
             </div>
         </div>
     );

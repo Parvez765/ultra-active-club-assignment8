@@ -2,14 +2,20 @@ import React from 'react';
 import "./Sport.css"
 
 const Sport = (props) => {
-    const { item } = props
-    const {picture, name, time} = item
+    const { item, handleAddToList} = props
+
+    
+    const { picture, name, time } = item
+    
+   
+
+
     return (
         <div className='sportContainer'>
             <img src={picture} alt="" />
-            <h2>Excercise Name: {name}</h2>
-            <h2>Time: {time}</h2>
-            <button className='addBtn'>Add To Cart</button>
+            <h4>Excercise Name: {name}</h4>
+            <h5>Time:{time}</h5>
+            <button className='addBtn' onClick={()=>handleAddToList(time)}>Add To List</button>
         </div>
     );
 };
