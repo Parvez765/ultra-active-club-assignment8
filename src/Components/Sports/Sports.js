@@ -44,7 +44,6 @@ const Sports = () => {
                      {
                         items.map(item => <Sport
                             handleAddToList={handleAddToList}
-                            
                             key={item.id}
                             item={item}
                            
